@@ -1,0 +1,13 @@
+{
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "description": "Shuka, a planting agent for West African growers. Open-source AI at its core.",
+  "license": "MIT",
+  "main": "server.js",
+  "name": "shuka",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "version": "1.0.0"
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shuka, a West African planting agent</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <div class="brand"><span class="leaf">🌱</span> Shuka</div>
+    <h1>What do I plant, and when?</h1>
+    <p class="sub">A planting agent for West African growers. Tell it your space and soil.
+      it builds your 12-month planting calendar, tuned to rainy and dry seasons.</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="card" id="form-card">
+    <h2>Your growing space</h2>
+    <form id="plan-form">
+      <div class="grid2">
+        <label>Location
+          <input type="text" name="location" value="Kaduna, Nigeria" required>
+        </label>
+        <label>Plot size <span class="opt">(optional)</span>
+          <input type="text" name="plotSize" placeholder="e.g. 4m × 6m, or 10 pots">
+        </label>
+      </div>
+      <div class="grid3">
+        <label>Space
+          <select name="space">
+            <option value="containers">Balcony / containers</option>
+            <option value="backyard" selected>Small backyard</option>
+            <option value="plot">Open plot / farm</option>
+          </select>
+        </label>
+        <label>Sunlight
+          <select name="sunlight">
+            <option value="full sun" selected>Full sun (6+ hours)</option>
+            <option value="partial shade">Partial shade</option>
+          </select>
+        </label>
+        <label>Soil
+          <select name="soil">
+            <option value="unknown" selected>I don't know</option>
+            <option value="sandy">Sandy</option>
+            <option value="loamy">Loamy</option>
+            <option value="clay">Clay</option>
+          </select>
+        </label>
+      </div>
+      <fieldset>
+        <legend>What do you want to grow?</legend>
+        <div class="chips" id="crop-chips"></div>
+      </fieldset>
+      <p class="model-note">Powered by <span id="model-name">an open-weight model</span>. Free to run, free to swap.</p>
+      <button type="submit" id="go-btn">Grow my plan 🌱</button>
+      <p class="fine">No account. No cost. Your answers never leave this page except to the model.</p>
+    </form>
+  </section>
+
+  <div id="status" class="hidden"></div>
+
+  <section id="results" class="hidden">
+    <div class="card summary-card">
+      <h2>Your plan <span id="model-badge" class="badge"></span></h2>
+      <p id="summary"></p>
+    </div>
+    <h2 class="section-title">Planting calendar</h2>
+    <div id="calendar" class="months"></div>
+    <div class="grid2">
+      <div class="card">
+        <h2>Companion planting</h2>
+        <ul id="companions" class="plain"></ul>
+      </div>
+      <div class="card">
+        <h2>Care guide</h2>
+        <dl id="care" class="care"></dl>
+      </div>
+    </div>
+    <div class="card">
+      <h2>Field tips</h2>
+      <ul id="tips" class="plain"></ul>
+    </div>
+    <button id="again-btn" class="ghost">← Plan another plot</button>
+  </section>
+</main>
+
+<footer class="wrap">
+  <p>Shuka means <em>a young plant</em> in Hausa. Built with <span id="foot-model">open-weight AI</span> for Hacktoberfest 2026 · Week 1: Touch Grass.</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
