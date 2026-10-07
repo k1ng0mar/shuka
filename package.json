@@ -5,6 +5,9 @@
   "description": "Shuka, a planting agent for West African growers. Open-source AI at its core.",
   "license": "MIT",
   "main": "server.js",
+  "engines": {
+    "node": ">=20"
+  },
   "name": "shuka",
   "scripts": {
     "start": "node server.js"
